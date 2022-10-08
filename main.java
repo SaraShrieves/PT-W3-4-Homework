@@ -4,23 +4,32 @@ public class main {
 
 	public static void main(String[] args) {
 //	1.	Create an array of int called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
+		System.out.println("Question #1:");
+		
+		int [] ages = {3,9,23, 64, 2, 8, 28, 93};
+		
 //	a.	Programmatically subtract the value of the first element in the array from the value in the last element of the array (i.e. do not use ages[7] in your code). Print the result to the console.  
+		
+		int lastMinusFirst = (ages[ages.length -1] - ages[0]);
+		System.out.println(lastMinusFirst);
+		
 //	b.	Add a new age to your array and repeat the step above to ensure it is dynamic (works for arrays of different lengths).
+		
+		int [] ages2 = {3, 9, 23, 64, 2, 8, 28, 93, 100};
+		int lastMinusFirst2 = (ages2[ages2.length -1] - ages2[0]);
+		System.out.println(lastMinusFirst2);
+
+		
 //	c.	Use a loop to iterate through the array and calculate the average age. Print the result to the console.
 		System.out.println("Question #1:");
 		
-		int[] ages = {3, 9, 23, 64, 2, 8, 28, 93};  //array of ages
-			System.out.println(ages[ages.length - 1]);
+		double sum = 0;
 		
-		ages[ages.length - 1] = 100;  //new age for array
-			System.out.println(ages[0] - ages[ages.length - 1]);
-			
-		double averageAge = 0;
-		
-		for (int x : ages) {  //loop to be able to calculate average age
-			averageAge += x;
+		for (int x : ages) {
+			sum += x;
 		}
-			System.out.println(averageAge / ages.length);
+			System.out.println(sum/ages.length);
+
 		
 //	2.	Create an array of String called names that contains the following values: “Sam”, “Tommy”, “Tim”, “Sally”, “Buck”, “Bob”.
 //	a.	Use a loop to iterate through the array and calculate the average number of letters per name. Print the result to the console.
@@ -30,12 +39,12 @@ public class main {
 		
 		String [] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
 		
-		double sum = 0;
+		double sums = 0;
 		for (int letters = 0; letters < names.length; letters++) {
 		
-			sum += names[letters].length(); }
+			sums += names[letters].length(); }
 		
-			System.out.println(sum/names.length); //average letters in each name achieved by dividing the total number of letters buy the number of names. 23/6 = 3.83
+			System.out.println(sums/names.length); //average letters in each name achieved by dividing the total number of letters buy the number of names. 23/6 = 3.83
 			
 //	3.	How do you access the last element of any array?
 		System.out.println(" ");	
